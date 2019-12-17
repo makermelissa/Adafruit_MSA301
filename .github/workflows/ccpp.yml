@@ -14,8 +14,8 @@ jobs:
         source <(curl -SLs https://raw.githubusercontent.com/makermelissa/travis-ci-arduino/master/install.sh)
     - name: install libraries
       run: |
-        arduino --install-library "Adafruit BusIO"
-        arduino --install-library "Adafruit Unified Sensor"
+        $HOME/arduino_ide/arduino --install-library "Adafruit BusIO"
+        $HOME/arduino_ide/arduino --install-library "Adafruit Unified Sensor"
     - name: test platform
       run: build_main_platforms
     - name: build documentation
